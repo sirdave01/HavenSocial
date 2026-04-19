@@ -1,7 +1,7 @@
 {
-  "name": "miniconnect",
+  "name": "havensocial",
   "version": "1.0.0",
-  "description": "Demi-Twitter/X social media platform with JSONPlaceholder and Geolocation APIs",
+  "description": "Social Media App for Afrcia and the Globe powered by HavenByte Token (HBT), developed by ByteHaven Tech Solutions Ltd",
   "main": "main.js",
   "scripts": {
     "start": "vite",
