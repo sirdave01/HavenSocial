@@ -114,17 +114,12 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link">Skip to main Content</a>
 
     <header>
       <h1>HavenSocial</h1>
 
       <div>
         <button id="dark-mode-toggle">🌙</button>
-
-        <button id="notifications-bell">
-          🔔 <span id="notif-count">0</span>
-        </button>
 
         <div id="notifications-dropdown" class="hidden"></div>
 
@@ -155,20 +150,40 @@
         >
 
         <a data-view="new-post" aria-label="New Post"
-          >✚<span class="tab-label">Post</span></a
+          >✚<span class="tab-label">New Post</span></a
         >
+
+        <!-- ✅ MESSAGING TAB (fixed) -->
+        <a data-view="messages" aria-label="Messages">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" />
+          </svg>
+          <span class="tab-label">Messages</span>
+        </a>
+
+        <button id="notifications-bell">
+          🔔 <span id="notif-count">0</span>
+        </button>
 
         <a data-view="profile" aria-label="Profile"
           >👤<span class="tab-label">Profile</span></a
         >
+
       </div>
 
       <!-- Hamburger menu for extra options -->
+       
       <div id="nav-list">
-        <a data-view="nearby">Nearby</a>
-
-        <a data-view="settings">Settings</a>
+        <a data-view="home">🏠 Home</a>
+        <a data-view="search">🔍 Search</a>
+        <a data-view="new-post">✚ New Post</a>
+        <a data-view="messages">✉️ Messages</a>
+        <a data-view="profile">👤 Profile</a>
+        <a data-view="nearby">📍 Nearby</a>
+        <a data-view="settings">⚙️ Settings</a>
       </div>
+
     </nav>
 
     <main>
@@ -225,91 +240,33 @@
 
       <div id="settings-container" class="hidden">
         <div id="settings-content"></div>
+
       </div>
+
+      <!-- Messages Container -->
+      <div id="messages-container" class="hidden">
+        <div id="chats-list" class="chats-list"></div>
+      
+        <div id="chat-window" class="chat-window hidden">
+
+          <div id="chat-header" class="chat-header"></div>
+
+          <div id="chat-messages" class="chat-messages"></div>
+
+          <div class="chat-input-area">
+
+            <input type="text" id="chat-input" placeholder="Type a message..." />
+
+            <button id="send-message-btn">Send</button>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </main>
 
-    <footer>
-      <!-- Footer -->
-      <div id="bytehaven-digital">
-        <h3>ByteHaven Tech Solutions</h3>
-
-        <p>
-          Your digital safe Space that turns your Tech Problems into Solutions
-        </p>
-
-        <p>
-          <img src="/images/icons/location.svg" alt="location icon" /> Aba, Abia
-          State, Nigeria
-        </p>
-
-        <p>
-          <img src="/images/icons/email.svg" alt="email icon" /><a
-            href="mailto:d08178084956@gmail?subject=Inquiry%20Website&body=Hello,%20I%20have%20a%20question%20about..."
-            target="_blank"
-            >Email Us</a
-          >
-        </p>
-      </div>
-
-      <div id="quick-links">
-        <h3>Quick Links</h3>
-
-        <ul>
-          <li><a href="#" data-view="home">Home Feed</a></li>
-
-          <li><a href="#" data-view="nearby">Nearby</a></li>
-
-          <li><a href="#" data-view="profile">Profile</a></li>
-        </ul>
-      </div>
-
-      <div id="socials">
-        <h3>Socials</h3>
-
-        <a href="https://github.com/sirdave01/wdd231" target="_blank"
-          ><img
-            src="/images/github.svg"
-            alt="github"
-            width="16"
-            height="16"
-            loading="lazy"
-        /></a>
-
-        <a
-          href="https://www.linkedin.com/in/caleb-osigwe-294085253/"
-          target="_blank"
-          ><img
-            src="/images/linkedin.svg"
-            alt="linkedin"
-            width="16"
-            height="16"
-            loading="lazy"
-        /></a>
-
-        <a href="https://wa.me/+2349035677967" target="_blank"
-          ><img
-            src="/images/whatsapp.svg"
-            alt="whatsapp"
-            width="16"
-            height="16"
-            loading="lazy"
-        /></a>
-      </div>
-
-      <hr />
-
-      <div id="live-clock"></div>
-
-      <div id="year-date">
-        <p>• <a href="https://youtu.be/BR738VWVd5Q">YouTube Video</a></p>
-
-        <p>
-          &copy; <span id="currentyear"></span> ByteHaven Tech Solutions Ltd
-          Development Team
-        </p>
-
-        <p><span id="lastModified"></span></p>
-      </div>
-    </footer>
   </body>
+
 </html>

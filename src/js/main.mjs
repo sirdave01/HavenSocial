@@ -1,7 +1,7 @@
 // Entry point
 
-import { MiniConnectApp } from './app.mjs';
+import { HavenSocialApp } from './app.mjs';
 
 document.addEventListener('DOMContentLoaded', () => {
-    new MiniConnectApp();
+    new HavenSocialApp();
 });

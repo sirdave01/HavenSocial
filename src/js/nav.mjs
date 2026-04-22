@@ -6,6 +6,7 @@ import { loadNearby } from './locationdiscovery.mjs'; // Added for nearby view
 import { renderPostCard } from './feed.mjs'; // Added for profile posts
 import { loadSettings } from './settings.mjs';
 import { renderNotifications } from './notification.mjs';
+import { loadMessages } from './messages.mjs';
 
 export function initNavigation(app) {
     // Setup navigation handler that works for all nav elements
@@ -43,6 +44,11 @@ export function initNavigation(app) {
             }
             else if (view === 'notifications') {
                 renderNotifications(app);
+            }
+            else if (view === 'messages') {
+                import('./messages.mjs').then(({ loadMessages }) => {
+                    loadMessages(app);
+                });
             }
         }
     };
