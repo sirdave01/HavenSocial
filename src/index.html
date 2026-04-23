@@ -115,19 +115,27 @@
 
   <body>
     <header>
-
       <h1>HavenSocial</h1>
 
       <div>
-
         <button id="dark-mode-toggle">🌙</button>
 
         <button id="nav-btn" class="hamburger"></button>
 
         <!-- <div id="notifications-dropdown" class="hidden"></div> -->
 
-      </div>
+        <!-- Hamburger button for mobile -->
 
+        <!-- <button
+          id="nav-btn"
+          aria-label="Open navigation"
+          aria-controls="nav-list"
+          aria-expanded="false"
+          class="hamburger"
+        >
+          <span></span><span></span><span></span>
+        </button> -->
+      </div>
     </header>
 
     <nav id="main-nav">
@@ -145,6 +153,7 @@
           >✚<span class="tab-label">New Post</span></a
         >
 
+        <!-- ✅ MESSAGING TAB (fixed) -->
         <a data-view="messages" aria-label="Messages">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -180,7 +189,6 @@
         <a data-view="nearby">📍 Nearby</a>
         <a data-view="settings">⚙️ Settings</a>
       </div>
-      
     </nav>
 
     <main>

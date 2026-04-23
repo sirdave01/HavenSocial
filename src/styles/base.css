@@ -55,19 +55,6 @@ body {
   flex-direction: column;
 }
 
-/* Desktop Grid Layout */
-@media (min-width: 769px) {
-  body {
-    display: grid;
-    grid-template-columns: 260px 1fr 320px;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-      "sidebar header trends"
-      "sidebar main trends"
-      "sidebar footer trends";
-  }
-}
-
 /* ==================== HEADER ==================== */
 header {
   grid-area: header;
@@ -186,12 +173,6 @@ header {
   }
 }
 
-@media (min-width: 769px) {
-  #tab-bar {
-    display: none;
-  }
-}
-
 /* ==================== SIDEBAR NAV ==================== */
 #nav-list {
 
@@ -204,6 +185,7 @@ header {
     gap: 12px;
     font-size: 1.1rem;
     text-decoration: none;
+    cursor: pointer;
   }
 
   /* When #nav-list HAS the .show class, display the links */
@@ -219,21 +201,6 @@ header {
   }
 }
 
-
-
-
-@media (min-width: 769px) {
-  #main-nav {
-    width: 260px;
-    height: 100vh;
-    border-right: 1px solid var(--border);
-    padding-top: var(--spacing-xl);
-  }
-
-  #nav-list {
-    display: flex !important;
-  }
-}
 
 /* ==================== MAIN CONTENT ==================== */
 main {
