@@ -114,28 +114,20 @@
   </head>
 
   <body>
-
     <header>
+
       <h1>HavenSocial</h1>
 
       <div>
+
         <button id="dark-mode-toggle">🌙</button>
 
-        <div id="notifications-dropdown" class="hidden"></div>
+        <button id="nav-btn" class="hamburger"></button>
 
-        <!-- Hamburger button for mobile -->
+        <!-- <div id="notifications-dropdown" class="hidden"></div> -->
 
-        <button
-          id="nav-btn"
-          aria-label="Open navigation"
-          aria-controls="nav-list"
-          aria-expanded="false"
-          class="hamburger"
-          style="display: none"
-        >
-          <span></span><span></span><span></span>
-        </button>
       </div>
+
     </header>
 
     <nav id="main-nav">
@@ -153,11 +145,17 @@
           >✚<span class="tab-label">New Post</span></a
         >
 
-        <!-- ✅ MESSAGING TAB (fixed) -->
         <a data-view="messages" aria-label="Messages">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
             <path
-              d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" />
+              d="M20 4H4C2.9 4 2.01 4.9 2.01 6L2 18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z"
+            />
           </svg>
           <span class="tab-label">Messages</span>
         </a>
@@ -169,11 +167,10 @@
         <a data-view="profile" aria-label="Profile"
           >👤<span class="tab-label">Profile</span></a
         >
-
       </div>
 
       <!-- Hamburger menu for extra options -->
-       
+
       <div id="nav-list">
         <a data-view="home">🏠 Home</a>
         <a data-view="search">🔍 Search</a>
@@ -183,7 +180,7 @@
         <a data-view="nearby">📍 Nearby</a>
         <a data-view="settings">⚙️ Settings</a>
       </div>
-
+      
     </nav>
 
     <main>
@@ -240,33 +237,28 @@
 
       <div id="settings-container" class="hidden">
         <div id="settings-content"></div>
-
       </div>
 
       <!-- Messages Container -->
       <div id="messages-container" class="hidden">
         <div id="chats-list" class="chats-list"></div>
-      
-        <div id="chat-window" class="chat-window hidden">
 
+        <div id="chat-window" class="chat-window hidden">
           <div id="chat-header" class="chat-header"></div>
 
           <div id="chat-messages" class="chat-messages"></div>
 
           <div class="chat-input-area">
-
-            <input type="text" id="chat-input" placeholder="Type a message..." />
+            <input
+              type="text"
+              id="chat-input"
+              placeholder="Type a message..."
+            />
 
             <button id="send-message-btn">Send</button>
-
           </div>
-
         </div>
-
       </div>
-
     </main>
-
   </body>
-
 </html>

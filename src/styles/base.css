@@ -45,7 +45,7 @@ body {
   overflow-x: hidden;
   background: var(--dark-bg);
   color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: "Inter", system-ui, sans-serif;
   line-height: 1.5;
   min-height: 100vh;
 }
@@ -87,7 +87,7 @@ header {
     text-align: center;
   }
 
-  >div {
+  > div {
     display: flex;
     align-items: center;
     gap: var(--spacing-md);
@@ -105,6 +105,25 @@ header {
     &:hover {
       background: rgba(16, 185, 129, 0.15);
     }
+  }
+}
+
+.hamburger{
+  background-color: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--gold);
+
+  
+  &::before {
+    content: "\2630";
+    font-size: 2rem;
+  }
+
+  &.show::before {
+    content: "\00D7";
+    font-size: 2rem;
   }
 }
 
@@ -174,21 +193,34 @@ header {
 }
 
 /* ==================== SIDEBAR NAV ==================== */
-#nav-list a {
-  padding: 14px 24px;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.1rem;
-  text-decoration: none;
+#nav-list {
+
+  /* When #nav-list DOES NOT have the .show class, hide the links */
+  & a {
+    display: none;
+    padding: 14px 24px;
+    color: var(--text);
+    align-items: center;
+    gap: 12px;
+    font-size: 1.1rem;
+    text-decoration: none;
+  }
+
+  /* When #nav-list HAS the .show class, display the links */
+  &.show a {
+    display: flex;
+  }
+
+  /* Hover & Active states */
+  & a:hover,
+  & a[aria-current="page"] {
+    background: rgba(16, 185, 129, 0.1);
+    color: var(--emerald);
+  }
 }
 
-#nav-list a:hover,
-#nav-list a[aria-current="page"] {
-  background: rgba(16, 185, 129, 0.1);
-  color: var(--emerald);
-}
+
+
 
 @media (min-width: 769px) {
   #main-nav {
@@ -280,7 +312,7 @@ main {
 
 /* ==================== UTILITY ==================== */
 .hidden,
-main>div.hidden {
+main > div.hidden {
   display: none !important;
 }
 
@@ -325,7 +357,7 @@ main>div.hidden {
 }
 
 #tab-bar a[data-view="messages"]::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 8px;
   right: 25%;
