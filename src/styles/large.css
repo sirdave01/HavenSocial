@@ -1,11 +1,38 @@
 @media screen and (min-width: 43.75rem) {
-  #tab-bar {
-    display: none;
-  }
 
-  body {
-      display: grid;
-      grid-template-columns: 1fr auto;
-  }
+    #tab-bar {
+
+        display: none;
+    }
+
+    .hamburger {
+
+        display: none;
+
+    }
+
+    #nav-list {
+
+        display: flex;
+
+        flex-direction:column;
+
+        position: fixed;
+
+        gap: 20px;
+
+    }
+
+    #nav-list a {
+
+        display: flex;
+
+        flex-direction: row;
+
+        text-decoration: none;
+
+        padding: 10px;
+
+    }
     
 }
