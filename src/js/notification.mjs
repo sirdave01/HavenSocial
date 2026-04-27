@@ -55,6 +55,7 @@ export function renderNotifications(app) {
     // Show dropdown - remove hidden and add show
     dropdown.classList.remove('hidden');
     dropdown.classList.add('show');
+    dropdown.style.display = 'block';
     
     // Hide on click outside
     document.addEventListener('click', hideNotificationsBound, { once: true });

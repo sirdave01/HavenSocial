@@ -1,38 +1,29 @@
 @media screen and (min-width: 43.75rem) {
+  #tab-bar {
+    display: none;
+  }
 
-    #tab-bar {
+  .hamburger {
+    display: none;
+  }
 
-        display: none;
-    }
+  #nav-list {
+    display: flex;
 
-    .hamburger {
+    flex-direction: column;
 
-        display: none;
+    position: fixed;
 
-    }
+    gap: 20px;
+  }
 
-    #nav-list {
+  #nav-list a {
+    display: flex;
 
-        display: flex;
+    flex-direction: row;
 
-        flex-direction:column;
+    text-decoration: none;
 
-        position: fixed;
-
-        gap: 20px;
-
-    }
-
-    #nav-list a {
-
-        display: flex;
-
-        flex-direction: row;
-
-        text-decoration: none;
-
-        padding: 10px;
-
-    }
-    
+    padding: 10px;
+  }
 }

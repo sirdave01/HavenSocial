@@ -100,7 +100,7 @@
 
     <link rel="stylesheet" href="/styles/base.css" />
 
-    <link rel="stylesheet" href="/styles/large.css">
+    <link rel="stylesheet" href="/styles/large.css" />
 
     <script type="module" src="/js/main.mjs"></script>
 
@@ -117,14 +117,12 @@
 
   <body>
     <header>
-      
+      <button id="nav-btn" class="hamburger"></button>
+
       <h1>HavenSocial</h1>
 
       <div>
-
         <button id="dark-mode-toggle">🌙</button>
-
-        <button id="nav-btn" class="hamburger"></button>
 
         <!-- <div id="notifications-dropdown" class="hidden"></div> -->
 
@@ -192,6 +190,9 @@
         <a data-view="profile">👤 Profile</a>
         <a data-view="nearby">📍 Nearby</a>
         <a data-view="settings">⚙️ Settings</a>
+        <!-- <button id="notifications-bell">
+          🔔 <span id="notif-count">0</span>
+        </button> -->
       </div>
     </nav>
 
